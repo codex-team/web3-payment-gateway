@@ -85,6 +85,7 @@
     "https://deno.land/x/hono@v3.10.2/hono.ts": "2cc4c292e541463a4d6f83edbcea58048d203e9564ae62ec430a3d466b49a865",
     "https://deno.land/x/hono@v3.10.2/http-exception.ts": "6071df078b5f76d279684d52fe82a590f447a64ffe1b75eb5064d0c8a8d2d676",
     "https://deno.land/x/hono@v3.10.2/jsx/index.ts": "019512d3a9b3897b879e87fa5fb179cd34f3d326f8ff8b93379c2bb707ec168a",
+    "https://deno.land/x/hono@v3.10.2/jsx/intrinsic-elements.ts": "03250beb610bda1c72017bc0912c2505ff764b7a8d869e7e4add40eb4cfec096",
     "https://deno.land/x/hono@v3.10.2/jsx/streaming.ts": "5d03b4d02eaa396c8f0f33c3f6e8c7ed3afb7598283c2d4a7ddea0ada8c212a7",
     "https://deno.land/x/hono@v3.10.2/middleware.ts": "57b2047c4b9d775a052a9c44a3b805802c1d1cb477ab9c4bb6185d27382d1b96",
     "https://deno.land/x/hono@v3.10.2/middleware/basic-auth/index.ts": "5505288ccf9364f56f7be2dfac841543b72e20656e54ac646a1a73a0aa853261",
