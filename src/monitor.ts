@@ -1,5 +1,6 @@
 import { createPublicClient, http } from 'npm:viem'
 import { goerli } from 'npm:viem/chains'
+import { address } from "./constants.ts";
 
 const client = createPublicClient({
   chain: goerli,
@@ -12,17 +13,20 @@ const main = async () => {
   
     setInterval(async () => {
       const currentBlockNumber = await client.getBlockNumber();
-      if (currentBlockNumber > latestBlockNumber) {
+      while (currentBlockNumber > latestBlockNumber) {
         const block = await client.getBlock({ blockNumber: currentBlockNumber, includeTransactions: true })
         if (block && block.transactions) {
           console.log(`New block number: ${block.number}`);
           block.transactions.forEach(tx => {
-            console.log(`Transaction: from ${tx.from} to ${tx.to} amount: ${tx.value} ETH`);
+            if (tx.to === address) {
+                console.log(`MATCH!!!!`);
+                console.log(`Transaction: from ${tx.from} to ${tx.to} amount: ${tx.value} ETH`);
+            }
           });
         }
-        latestBlockNumber = currentBlockNumber;
+        latestBlockNumber++;
       }
-    }, 10000); // Poll every 10 seconds
+    }, 5000); // Poll every 10 seconds
   };
   
   main().catch(e => console.error(e));
