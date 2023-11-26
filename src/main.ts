@@ -1,6 +1,11 @@
 import { Hono } from 'https://deno.land/x/hono@v3.10.2/mod.ts'
+import { cors } from 'https://deno.land/x/hono/middleware.ts'
+
 
 const app = new Hono()
+
+app.use('*', cors())
+
 
 app.get('/', (c) => c.text('Hello Hono!'))
 
@@ -12,7 +17,7 @@ app.post('/invoice/create', (c) => {
         message: 'Invoice created',
         data: {
             id: '12345',
-            amount: 1000,
+            amount: 0.0000001 * 10**18,
             currency: 'ETH',
             walletAddress: address,
         },
