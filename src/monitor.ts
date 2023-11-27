@@ -1,6 +1,10 @@
 import { createPublicClient, http } from "npm:viem";
 import { goerli } from "npm:viem/chains";
 import { address } from "./constants.ts";
+import db from "./postgres/db.ts";
+import { invoices } from "./postgres/schema.ts";
+
+await db.select().from(invoices)
 
 const client = createPublicClient({
   chain: goerli,
