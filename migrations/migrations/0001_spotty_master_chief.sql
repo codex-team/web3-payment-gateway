@@ -1,0 +1,1 @@
+ALTER TABLE "invoices" ADD COLUMN "status" text DEFAULT 'pending' NOT NULL;

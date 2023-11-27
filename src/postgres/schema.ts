@@ -6,6 +6,7 @@ export const invoices = pgTable('invoices', {
     chainId: integer("chain_id").notNull(),
     walletAddress: varchar("wallet_address").notNull(),
     amount: bigint("amount", { mode: "bigint" }).notNull(),
+    status: text("status").notNull().default("pending"),
 });
 
 export type Invoice = typeof invoices.$inferSelect;
