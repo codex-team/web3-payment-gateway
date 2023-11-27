@@ -15,6 +15,13 @@
       "when": 1701044939314,
       "tag": "0001_spotty_master_chief",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1701045985221,
+      "tag": "0002_neat_nico_minoru",
+      "breakpoints": true
     }
   ]
 }
